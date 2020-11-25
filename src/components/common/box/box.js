@@ -1,16 +1,7 @@
 import './box.css'
-/*
-export default class Box extends React.Component { 
 
-    constructor(props) {
-        super(props);
-    }
-    
-    clickMe() {
-        console.log("click");
-    }
-    
-    render() {
+export default function Box (props) { 
+
         const box = <div className="box">
         <img src={props.img} />
         <h1>{props.title}</h1>
@@ -21,9 +12,7 @@ export default class Box extends React.Component {
         <p>{props.price}</p>
         <p><select><option>{props.quantity}</option></select></p>
         <p>{props.price}</p>
-        <button onClick={this.clickMe}>Click Me!</button>
     </div>;
 
     return box;
-      }
     }

@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import Box from './components/common/box/box.js'
+import Counter from './components/common/counter/counter.js'
 
 function App() {
 
   const box = 
   <div>
+  <Counter />
   <Box 
     title="Apple iPad Pro (2018), 1 TB, Plata, WiFi, 11 Retina, 6 GB RAM, Chip A12X Bionic, iOS"
     description="Tamaño pantalla (pulgadas): 11 , Resolución: 2388 x 1668 píxeles, Retroiluminación LED: Sí, Calidad de imagen: XGA, Tamaño"
