@@ -1,25 +1,45 @@
-import logo from './logo.svg';
 import './App.css';
+import Item from './components/shopcart/item/item.js'
+import Counter from './components/common/counter/counter.js'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  const shopcart = 
+  <div>
+  <Counter />
+  <Item 
+    title="Apple iPad Pro (2018), 1 TB, Plata, WiFi, 11 Retina, 6 GB RAM, Chip A12X Bionic, iOS"
+    description="Tamaño pantalla (pulgadas): 11 , Resolución: 2388 x 1668 píxeles, Retroiluminación LED: Sí, Calidad de imagen: XGA, Tamaño"
+    article="1438740"
+    img="https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-80082304/fee_120_106_png/Apple-iPad-Pro-%282018%29--1-TB--Plata--WiFi--11%22-Retina--6-GB-RAM--Chip-A12X-Bionic--iOS"
+    units="5"
+    delivery="2"
+    price="1386.00"
+    quantity="1"
+    />
+  <Item 
+    title="Apple iPad Pro (2018), 1 TB, Plata, WiFi, 11 Retina, 6 GB RAM, Chip A12X Bionic, iOS"
+    description="Tamaño pantalla (pulgadas): 11 , Resolución: 2388 x 1668 píxeles, Retroiluminación LED: Sí, Calidad de imagen: XGA, Tamaño"
+    article="1438740"
+    img="https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-80082304/fee_120_106_png/Apple-iPad-Pro-%282018%29--1-TB--Plata--WiFi--11%22-Retina--6-GB-RAM--Chip-A12X-Bionic--iOS"
+    units="5"
+    delivery="2"
+    price="1386.00"
+    quantity="1"
+    />
+  <Item 
+    title="Apple iPad Pro (2018), 1 TB, Plata, WiFi, 11 Retina, 6 GB RAM, Chip A12X Bionic, iOS"
+    description="Tamaño pantalla (pulgadas): 11 , Resolución: 2388 x 1668 píxeles, Retroiluminación LED: Sí, Calidad de imagen: XGA, Tamaño"
+    article="1438740"
+    img="https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-80082304/fee_120_106_png/Apple-iPad-Pro-%282018%29--1-TB--Plata--WiFi--11%22-Retina--6-GB-RAM--Chip-A12X-Bionic--iOS"
+    units="5"
+    delivery="2"
+    price="1386.00"
+    quantity="1"
+    />
+  </div>
+
+  return shopcart;
 }
 
 export default App;

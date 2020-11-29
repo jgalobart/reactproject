@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+.item {
+    background: #FFF;
+    font-family: 'Oswald', sans-serif;
+    font-size:0.8em;
+    border: 1px solid #EEE;
+    color: #333;
+    margin:0 20px;
+    padding: 10px;
+
+    display: flex;
+    gap:20px;
+
+    h2 {
+        margin:0;
+        padding:0;
+        font-size:1.2em;
+        color:#000;
+    }
+
+    h3 {
+        font-size:1.4em;
+    }
+
+    p {
+        margin:0;
+        padding:0;
+    }
+
+    .productimg {
+        .addFavorite {
+            background:url('heart.svg');
+            background-repeat:no-repeat;
+            background-position: left;
+            padding-left: 25px;
+        }
+    }
+
+    .itemId {
+        margin: 5px 0;
+        color: #999;
+    }
+
+    .stock {
+        margin:10px 0;
+
+        ul {
+            display:flex;
+            gap: 5px;
+            flex-basis: 50%;
+            margin:0;
+            padding:0;
+            padding-inline-start: 0px;
+    
+    
+            li {
+                margin:0;
+                padding:0;
+                width: 80px;
+                background:#AAA;
+                list-style:none;
+                display:block;
+                color:#FFF;
+                text-align: center;
+                font-size: 0.8em;
+            }
+        }
+    }
+
+    .delivery {
+        color: #000;
+        padding:10px 0 10px 40px;
+        border-bottom:1px solid #CCC;
+        background:url('truck.svg');
+        background-repeat:no-repeat;
+        background-position: left;
+
+        span {
+            color:#008000;
+        }
+    }
+
+    .addonslist {
+        margin:0;
+        padding:0;
+        padding-inline-start: 20px;
+        li {
+            margin:0;
+            padding:0;
+            list-style:none;
+            span {
+                float: right;
+            }
+        }
+    }
+
+    .quantity {
+
+        select {
+            width:50px;
+            text-align-last: right;
+            margin-bottom: 10px;
+            background: #EEE;
+            box-shadow: inset 0px 0px 10px 2px #BBB;
+            padding: 5px;
+
+            option {
+                direction:rtl;
+            }
+        }
+
+        a.removeItem {
+            background:url('trash.svg');
+            background-repeat:no-repeat;
+            background-position: left;
+            padding-left: 25px;
+        }
+    }
+
+}
