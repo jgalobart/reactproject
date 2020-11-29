@@ -20,7 +20,7 @@ export default function Item (props) {
                             </ul>
                             <p>Quedan pocas unidades ¡Corre que vuela!</p>
                         </div>
-                        <p class="delivery">Entrega disponible en {props.delivery} días laborables en península</p>
+                        <p class="delivery">Entrega disponible en <span>{props.delivery}</span> días laborables en península</p>
                         <h3>Protege tu producto</h3>
                         <ul className="addonslist">
                             <li>

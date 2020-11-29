@@ -75,6 +75,10 @@
         background:url('truck.svg');
         background-repeat:no-repeat;
         background-position: left;
+
+        span {
+            color:#008000;
+        }
     }
 
     .addonslist {
@@ -92,6 +96,16 @@
     }
 
     .quantity {
+
+        select {
+            width:50px;
+            text-align-last: right;
+            margin-bottom: 10px;
+            option {
+                direction:rtl;
+            }
+        }
+
         a.removeItem {
             background:url('trash.svg');
             background-repeat:no-repeat;
