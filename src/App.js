@@ -1,14 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
-import Box from './components/common/box/box.js'
+import Item from './components/shopcart/item/item.js'
 import Counter from './components/common/counter/counter.js'
 
 function App() {
 
-  const box = 
+  const shopcart = 
   <div>
   <Counter />
-  <Box 
+  <Item 
     title="Apple iPad Pro (2018), 1 TB, Plata, WiFi, 11 Retina, 6 GB RAM, Chip A12X Bionic, iOS"
     description="Tamaño pantalla (pulgadas): 11 , Resolución: 2388 x 1668 píxeles, Retroiluminación LED: Sí, Calidad de imagen: XGA, Tamaño"
     article="1438740"
@@ -18,7 +17,7 @@ function App() {
     price="1386.00"
     quantity="1"
     />
-  <Box 
+  <Item 
     title="Apple iPad Pro (2018), 1 TB, Plata, WiFi, 11 Retina, 6 GB RAM, Chip A12X Bionic, iOS"
     description="Tamaño pantalla (pulgadas): 11 , Resolución: 2388 x 1668 píxeles, Retroiluminación LED: Sí, Calidad de imagen: XGA, Tamaño"
     article="1438740"
@@ -28,7 +27,7 @@ function App() {
     price="1386.00"
     quantity="1"
     />
-  <Box 
+  <Item 
     title="Apple iPad Pro (2018), 1 TB, Plata, WiFi, 11 Retina, 6 GB RAM, Chip A12X Bionic, iOS"
     description="Tamaño pantalla (pulgadas): 11 , Resolución: 2388 x 1668 píxeles, Retroiluminación LED: Sí, Calidad de imagen: XGA, Tamaño"
     article="1438740"
@@ -40,7 +39,7 @@ function App() {
     />
   </div>
 
-  return box;
+  return shopcart;
 }
 
 export default App;
