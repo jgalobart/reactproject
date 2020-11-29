@@ -1,4 +1,4 @@
-import './box.css'
+import './box.scss'
 
 export default function Box (props) { 
 
