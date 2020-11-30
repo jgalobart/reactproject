@@ -5,7 +5,7 @@ export default function ItemsList(props) {
     const items = {
         item1: {
             article: 1478788,
-            units: 15,
+            units: 75,
             price: 1386.50,
         },
         item2: {

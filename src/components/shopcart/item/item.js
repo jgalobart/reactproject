@@ -1,21 +1,41 @@
+import React from 'react';
 import './item.scss'
 
 import Stock from './stock/stock.js'
 
-export default function Item (props) { 
+export default class Item extends React.Component { 
 
+    constructor(props) {
+        super(props);
+        this.handleChange = this.handleChange.bind(this);
+        this.state = {
+            quantity : 1,
+            total: props.price,
+        }
+    }
+
+    handleChange(event) {
+        console.log('change!');
+
+        this.setState({
+            quantity: event.target.value,
+            total: event.target.value * this.props.price,
+        });
+    }
+
+    render() {
         const item = 
                 <div className="item">
                     <div className="productimg">
-                        <img src={props.img} alt="imagen" />
+                        <img src={this.props.img} alt="imagen" />
                         <p><a href="index.html" className="addFavorite">Añadir a favoritos</a></p>
                     </div>
                     <div className="description">
-                        <h2>{props.title}</h2>
-                        <p>{props.description}</p>
-                        <p className="itemId">Número de artículo: {props.article}</p>
-                        <Stock units={props.units} />
-                        <p className="delivery">Entrega disponible en <span>{props.delivery}</span> días laborables en península</p>
+                        <h2>{this.props.title}</h2>
+                        <p>{this.props.description}</p>
+                        <p className="itemId">Número de artículo: {this.props.article}</p>
+                        <Stock units={this.props.units} />
+                        <p className="delivery">Entrega disponible en <span>{this.props.delivery}</span> días laborables en península</p>
                         <h3>Protege tu producto</h3>
                         <ul className="addonslist">
                             <li>
@@ -40,16 +60,26 @@ export default function Item (props) {
                         </ul>
                     </div>
                     <div className="price">
-                        <p>€ {props.price}</p>
+                        <p>€ {this.props.price}</p>
                     </div>
                     <div className="quantity">
-                        <p><select><option>{props.quantity}</option></select></p>
+                        <p>
+                            <select onChange={this.handleChange} value={this.state.quantity}>
+                                <option>{this.props.quantity}</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </p>
                         <p><a href="index.html" className="removeItem">Eliminar</a></p>
                     </div>
                     <div className="totalprice">
-                        <p>€ {props.price}</p>
+                        <p>€ {this.state.total}</p>
                     </div>
                 </div>;
 
     return item;
+    }
+        
     }

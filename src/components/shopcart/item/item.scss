@@ -64,6 +64,19 @@
                 color:#FFF;
                 text-align: center;
                 font-size: 0.8em;
+
+                &.low {
+                    background: #cf0000;
+                }
+
+                &.medium {
+                    background: #ff7606;
+                }
+
+                &.full {
+                    background: #008000;
+                }
+
             }
         }
     }
