@@ -1,26 +1,21 @@
 import './item.scss'
 
+import Stock from './stock/stock.js'
+
 export default function Item (props) { 
 
         const item = 
                 <div className="item">
                     <div className="productimg">
-                        <img src={props.img} />
-                        <p><a href="" className="addFavorite">Añadir a favoritos</a></p>
+                        <img src={props.img} alt="imagen" />
+                        <p><a href="index.html" className="addFavorite">Añadir a favoritos</a></p>
                     </div>
                     <div className="description">
                         <h2>{props.title}</h2>
                         <p>{props.description}</p>
                         <p className="itemId">Número de artículo: {props.article}</p>
-                        <div className="stock">
-                            <ul>
-                                <li>&gt; 25%</li>
-                                <li>&gt; 50%</li>
-                                <li>&gt; 75%</li>
-                            </ul>
-                            <p>Quedan pocas unidades ¡Corre que vuela!</p>
-                        </div>
-                        <p class="delivery">Entrega disponible en <span>{props.delivery}</span> días laborables en península</p>
+                        <Stock units={props.units} />
+                        <p className="delivery">Entrega disponible en <span>{props.delivery}</span> días laborables en península</p>
                         <h3>Protege tu producto</h3>
                         <ul className="addonslist">
                             <li>
@@ -49,7 +44,7 @@ export default function Item (props) {
                     </div>
                     <div className="quantity">
                         <p><select><option>{props.quantity}</option></select></p>
-                        <p><a href="" className="removeItem">Eliminar</a></p>
+                        <p><a href="index.html" className="removeItem">Eliminar</a></p>
                     </div>
                     <div className="totalprice">
                         <p>€ {props.price}</p>
