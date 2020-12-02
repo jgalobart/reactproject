@@ -5,8 +5,8 @@ export default function Item (props) {
         const item = 
                 <div className="item">
                     <div className="productimg">
-                        <img src={props.img} />
-                        <p><a href="" className="addFavorite">Añadir a favoritos</a></p>
+                        <img src={props.img} alt={props.title}/>
+                        <p><a href="index.html" className="addFavorite">Añadir a favoritos</a></p>
                     </div>
                     <div className="description">
                         <h2>{props.title}</h2>
@@ -49,7 +49,7 @@ export default function Item (props) {
                     </div>
                     <div className="quantity">
                         <p><select><option>{props.quantity}</option></select></p>
-                        <p><a href="" className="removeItem">Eliminar</a></p>
+                        <p><a href="index.html" className="removeItem">Eliminar</a></p>
                     </div>
                     <div className="totalprice">
                         <p>€ {props.price}</p>
