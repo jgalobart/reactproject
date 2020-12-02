@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import './item.scss'
 
-import Stock from './stock/stock.js'
+const Stock = React.lazy(() => import('./stock/stock.js'));
 
 export default class Item extends React.Component { 
 
     constructor(props) {
         super(props);
         this.handleChange = this.handleChange.bind(this);
+        this.openDialog = this.openDialog.bind(this);
         this.state = {
             quantity : 1,
             total: props.price,
+            showDialog: false,
         }
     }
 
@@ -23,8 +25,18 @@ export default class Item extends React.Component {
         });
     }
 
+    openDialog(event) {
+        console.log("open Dialog");
+        this.setState({
+            showDialog: true,
+        });
+    }
+
     render() {
-        const item = 
+
+        var item = [];
+
+        item.push ( 
                 <div className="item">
                     <div className="productimg">
                         <img src={this.props.img} alt="imagen" />
@@ -34,12 +46,14 @@ export default class Item extends React.Component {
                         <h2>{this.props.title}</h2>
                         <p>{this.props.description}</p>
                         <p className="itemId">Número de artículo: {this.props.article}</p>
-                        <Stock units={this.props.units} />
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <Stock units={this.props.units} />
+                        </Suspense>
                         <p className="delivery">Entrega disponible en <span>{this.props.delivery}</span> días laborables en península</p>
                         <h3>Protege tu producto</h3>
                         <ul className="addonslist">
                             <li>
-                                <input type="checkbox" /> Garantía Uso Profesional - Protección 1 Año
+                                <input type="checkbox" onChange={this.openDialog} /> Garantía Uso Profesional - Protección 1 Año
                                 <span>€ 89.00</span>
                             </li>
                             <li>
@@ -77,7 +91,11 @@ export default class Item extends React.Component {
                     <div className="totalprice">
                         <p>€ {this.state.total}</p>
                     </div>
-                </div>;
+                </div>);
+
+        if (this.state.showDialog) {
+            item.push(<Dialog />);
+        }
 
     return item;
     }
