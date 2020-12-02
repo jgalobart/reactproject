@@ -1,0 +1,11 @@
+.dialog {
+    position:absolute;
+    top:20%;
+    left:50%;
+    margin-left:-100px;
+    width: 200px;
+    border: 1px solid #AAA;
+    background:#FFFFFF;
+    box-shadow: 0 0 10px #666;
+    padding: 10px 20px;
+}
