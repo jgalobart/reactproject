@@ -1,5 +1,6 @@
 import './App.css';
 
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,11 +8,9 @@ import {
   Link
 } from "react-router-dom";
 
-import ItemsList from './components/shopcart/list/list.js'
+import ItemsList from './components/shopcart/list/list.js';
 
-function About() {
-  return <h2>About</h2>
-}
+import About from './components/common/about/about.js';
 
 function Users() {
   return <h2>Users</h2>
@@ -25,6 +24,14 @@ function ShopCart() {
   )
 }
 
+function AboutView() {
+  return (
+    <div>
+      <About  text = 'Berenjena' />
+    </div>
+  )
+}
+
 function Home() {
   return <h2>Home</h2>
 }
@@ -32,13 +39,15 @@ function Home() {
 function App() {
   return (
     <Router>
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/users">Users</Link>
-      <Link to="/shopcart">Shopcart</Link>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/users">Users</Link></li>
+        <li><Link to="/shopcart">Shopcart</Link></li>
+      </ul>
       <Switch>
         <Route path="/about">
-          <About />
+          <AboutView />
         </Route>
         <Route path="/users">
           <Users />

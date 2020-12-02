@@ -1,0 +1,19 @@
+.dialog {
+    position:absolute;
+    top:20%;
+    left:50%;
+    margin-left:-100px;
+    width: 200px;
+    border: 1px solid #AAA;
+    background:#FFFFFF;
+    box-shadow: 0 0 10px #666;
+    padding: 10px 20px;
+}
+
+.dialog-bg {
+    background-color: rgba(0,0,0,0.8);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+}

@@ -1,6 +1,8 @@
 import React, { Suspense } from 'react';
 import './item.scss'
 
+import Dialog from '../../common/dialog/dialog.js';
+
 const Stock = React.lazy(() => import('./stock/stock.js'));
 
 export default class Item extends React.Component { 
@@ -39,7 +41,7 @@ export default class Item extends React.Component {
         item.push ( 
                 <div className="item">
                     <div className="productimg">
-                        <img src={this.props.img} alt="imagen" />
+                        <img src={this.props.img} alt={this.props.title}/>
                         <p><a href="index.html" className="addFavorite">Añadir a favoritos</a></p>
                     </div>
                     <div className="description">
@@ -94,7 +96,7 @@ export default class Item extends React.Component {
                 </div>);
 
         if (this.state.showDialog) {
-            item.push(<Dialog />);
+            item.push(<Dialog title="Title" description="¿Seguro quieres añadir este elemento?" />);
         }
 
     return item;
