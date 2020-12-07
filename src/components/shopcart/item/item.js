@@ -39,7 +39,7 @@ export default class Item extends React.Component {
         var item = [];
 
         item.push ( 
-                <div className="item">
+                <div key={this.props.article} className="item">
                     <div className="productimg">
                         <img src={this.props.img} alt={this.props.title}/>
                         <p><a href="index.html" className="addFavorite">Añadir a favoritos</a></p>
