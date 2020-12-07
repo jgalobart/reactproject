@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function About(props) {
 
@@ -6,6 +6,12 @@ export default function About(props) {
     const [car, setCar] = useState('Maseratti');
     const [count, setCount] = useState(0);
     const [vegetable, setVegetable] = useState(props.text);
+
+    useEffect(() => {
+        // Update the document title using the browser API
+        console.log('Effect!');
+     });
+    
   
     return (
       <>
